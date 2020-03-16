@@ -8,8 +8,19 @@
 
 import SwiftUI
 
-struct WelcomeView: View {
-    var size: CGFloat = 60
+struct WelcomeView {
+  
+    @State private var showHome = false
+    
+    private let name: String
+    let size: CGFloat = 60
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+
+extension WelcomeView: View {
     
     var body: some View {
         ZStack {
@@ -51,6 +62,6 @@ struct WelcomeView: View {
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView()
+        WelcomeView(name: "Kynan")
     }
 }
