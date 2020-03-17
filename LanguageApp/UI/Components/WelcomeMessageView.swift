@@ -10,18 +10,21 @@ import SwiftUI
 
 struct WelcomeMessageView: View {
     var body: some View {
-        VStack {
-            Text("Welcome to")
-                .font(.headline)
-                .bold()
-            Text("Language App")
-                .font(.largeTitle)
-                .bold()
+        HStack {
+            LogoImage(size: 60)
+            VStack {
+                Text("Welcome to")
+                    .font(.headline)
+                    .bold()
+                Text("Language App")
+                    .font(.largeTitle)
+                    .bold()
+            }
+            .foregroundColor(.red)
+            .lineLimit(2)
+            .multilineTextAlignment(.leading)
+            .padding(.horizontal)
         }
-        .foregroundColor(.red)
-        .lineLimit(2)
-        .multilineTextAlignment(.leading)
-        .padding(.horizontal)
     }
 }
 

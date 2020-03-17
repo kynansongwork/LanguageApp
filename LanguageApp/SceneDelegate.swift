@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             if let windowScene = scene as? UIWindowScene {
                 let window = UIWindow(windowScene: windowScene)
-                window.rootViewController = UIHostingController(rootView: WelcomeView(name: "Kynan"))
+                window.rootViewController = UIHostingController(rootView: RegisterView(keyboardHandler: KeyboardFollower()))
                 self.window = window
                 window.makeKeyAndVisible()
             }

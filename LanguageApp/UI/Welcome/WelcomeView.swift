@@ -24,10 +24,7 @@ extension WelcomeView: View {
     var body: some View {
         ZStack {
             WelcomeBackgroundImage()
-            HStack {
-                LogoImage(size: 60)
-                WelcomeMessageView()
-            }
+            WelcomeMessageView()
         }
     }
 }

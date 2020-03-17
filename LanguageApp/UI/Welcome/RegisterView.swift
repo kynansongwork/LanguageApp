@@ -9,19 +9,29 @@
 import SwiftUI
 
 struct RegisterView: View {
+    
+    @State var name: String = ""
+    
+    @ObservedObject var keyboardHandler: KeyboardFollower
+    
+    init(keyboardHandler: KeyboardFollower) {
+        self.keyboardHandler = keyboardHandler
+    }
+    
     var body: some View {
-        ZStack {
-            WelcomeBackgroundImage()
-            VStack {
-                WelcomeMessageView()
-            }
+        VStack {
+            WelcomeMessageView()
+            TextField("Type your name...", text: $name)
+            .bordered()
         }
-        
+        .padding(.bottom, keyboardHandler.keyboardHeight)
+        .background(WelcomeBackgroundImage())
+        .padding()
     }
 }
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        RegisterView(keyboardHandler: KeyboardFollower())
     }
 }
