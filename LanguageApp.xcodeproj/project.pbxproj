@@ -12,6 +12,9 @@
 		EA7AD891242120D00054D3F7 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD88C242120CF0054D3F7 /* Settings.swift */; };
 		EA7AD892242120D00054D3F7 /* KeyboardFollower.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD88E242120CF0054D3F7 /* KeyboardFollower.swift */; };
 		EA7AD895242122260054D3F7 /* WelcomeBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD894242122260054D3F7 /* WelcomeBackgroundImage.swift */; };
+		EA7AD897242123930054D3F7 /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD896242123930054D3F7 /* LogoImage.swift */; };
+		EA7AD899242124A50054D3F7 /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD898242124A50054D3F7 /* WelcomeMessageView.swift */; };
+		EA7AD89B242125650054D3F7 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD89A242125650054D3F7 /* RegisterView.swift */; };
 		EA7D79E3241FBCE800AD2347 /* cn.json in Resources */ = {isa = PBXBuildFile; fileRef = EA7D79E2241FBCE800AD2347 /* cn.json */; };
 		EA7D79E8241FBE1800AD2347 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7D79E7241FBE1800AD2347 /* WelcomeView.swift */; };
 		EAE63E76241FBC8E00A2C35F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE63E75241FBC8E00A2C35F /* AppDelegate.swift */; };
@@ -28,6 +31,9 @@
 		EA7AD88C242120CF0054D3F7 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		EA7AD88E242120CF0054D3F7 /* KeyboardFollower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardFollower.swift; sourceTree = "<group>"; };
 		EA7AD894242122260054D3F7 /* WelcomeBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackgroundImage.swift; sourceTree = "<group>"; };
+		EA7AD896242123930054D3F7 /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
+		EA7AD898242124A50054D3F7 /* WelcomeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageView.swift; sourceTree = "<group>"; };
+		EA7AD89A242125650054D3F7 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		EA7D79E2241FBCE800AD2347 /* cn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cn.json; sourceTree = "<group>"; };
 		EA7D79E7241FBE1800AD2347 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		EA7D7A75241FDE1D00AD2347 /* Languages */ = {isa = PBXFileReference; lastKnownFileType = text; name = Languages; path = Packages/Languages; sourceTree = SOURCE_ROOT; };
@@ -75,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				EA7AD894242122260054D3F7 /* WelcomeBackgroundImage.swift */,
+				EA7AD896242123930054D3F7 /* LogoImage.swift */,
+				EA7AD898242124A50054D3F7 /* WelcomeMessageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -103,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				EA7D79E7241FBE1800AD2347 /* WelcomeView.swift */,
+				EA7AD89A242125650054D3F7 /* RegisterView.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -239,9 +248,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7AD89B242125650054D3F7 /* RegisterView.swift in Sources */,
 				EA7AD891242120D00054D3F7 /* Settings.swift in Sources */,
 				EAE63E76241FBC8E00A2C35F /* AppDelegate.swift in Sources */,
 				EA7AD890242120D00054D3F7 /* Profile.swift in Sources */,
+				EA7AD899242124A50054D3F7 /* WelcomeMessageView.swift in Sources */,
+				EA7AD897242123930054D3F7 /* LogoImage.swift in Sources */,
 				EAE63E78241FBC8E00A2C35F /* SceneDelegate.swift in Sources */,
 				EA7AD892242120D00054D3F7 /* KeyboardFollower.swift in Sources */,
 				EA7AD88F242120D00054D3F7 /* UserManager.swift in Sources */,
