@@ -23,11 +23,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
-            let practice = PracticeStore()
             
             if let windowScene = scene as? UIWindowScene {
                 let window = UIWindow(windowScene: windowScene)
-                window.rootViewController = UIHostingController(rootView: StarterView(isRegistered: false, name: ""))
+                window.rootViewController = UIHostingController(rootView: WelcomeView(name: "Kynan"))
                 self.window = window
                 window.makeKeyAndVisible()
             }

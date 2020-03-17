@@ -26,24 +26,57 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import Combine
 import SwiftUI
+import Foundation
 
-struct ProfileView {
+final class UserManager: ObservableObject {
+  @Published
+  var profile: Profile = Profile()
   
-}
-
-extension ProfileView: View {
+  @Published
+  var settings: Settings = Settings()
   
-  var body: some View {
-    Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+  var isRegistered: Bool {
+    return profile.name.isEmpty == false
   }
   
-}
-
-#if DEBUG
-struct ProfileView_Previews: PreviewProvider {
-  static var previews: some View {
-    ProfileView()
+  init() {
+  }
+  
+  init(name: String) {
+    self.profile.name = name
+  }
+  
+  func persistProfile() {
+    if settings.rememberUser {
+      UserDefaults.standard.set(try? PropertyListEncoder().encode(profile), forKey: "user-profile")
+    }
+  }
+  
+  func persistSettings() {
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(settings), forKey: "user-settings")
+  }
+  
+  func load() {
+    if let data = UserDefaults.standard.value(forKey: "user-profile") as? Data {
+      if let profile = try? PropertyListDecoder().decode(Profile.self, from: data) {
+        self.profile = profile
+      }
+    }
+    
+    if let data = UserDefaults.standard.value(forKey: "user-settings") as? Data {
+      if let settings = try? PropertyListDecoder().decode(Settings.self, from: data) {
+        self.settings = settings
+      }
+    }
+  }
+  
+  func clear() {
+    UserDefaults.standard.removeObject(forKey: "user-profile")
+  }
+  
+  func isUserNameValid() -> Bool {
+    return profile.name.count >= 3
   }
 }
-#endif

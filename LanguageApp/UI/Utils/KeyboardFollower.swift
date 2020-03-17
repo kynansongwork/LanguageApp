@@ -26,53 +26,25 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import SwiftUI
+import UIKit
 
-import Assessing
-import Languages
-import Learning
-
-/// Displays the practice view with question and potential answers (choices).
-struct PracticeView {
+class KeyboardFollower : ObservableObject {
+  @Published var keyboardHeight: CGFloat = 0
+  @Published var isVisible = false
   
-  @EnvironmentObject private var practiceStore: PracticeStore
-  
-  /// Determines when the practice session has been completed.
-  /// Compares the session score with the number of assessments generated.
-  @State private var practiceComplete: Bool = false
-  
-  /// Initializes a new `PracticeView` and generates a `PracticeStore`
-  /// instance for the practice session state management.
   init() {
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardVisibilityChanged), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
   }
   
-}
-
-extension PracticeView: View {
-  
-  var body: some View {
-    Group {
-      if practiceComplete {
-        CongratulationsView()
-      } else {
-        ChallengeView(
-          onComplete: onComplete
-        ).onAppear(perform: {
-          self.practiceStore.build()
-        })
-      }
-    }
+  deinit {
+    NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
   }
   
-  func onComplete() {
-    self.practiceComplete = true
+  @objc private func keyboardVisibilityChanged(_ notification: Notification) {
+    guard let userInfo = notification.userInfo else { return }
+    guard let keyboardEndFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+    
+    isVisible = keyboardEndFrame.minY < UIScreen.main.bounds.height
+    keyboardHeight = isVisible ? keyboardEndFrame.height : 0
   }
 }
-
-#if DEBUG
-struct PracticeView_Previews: PreviewProvider {    
-  static var previews: some View {
-    return PracticeView()
-  }
-}
-#endif

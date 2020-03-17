@@ -24,13 +24,7 @@ extension WelcomeView: View {
     
     var body: some View {
         ZStack {
-            Image("welcome-background", bundle: nil)
-                .resizable()
-                .aspectRatio(1 / 1, contentMode: .fill)
-                .edgesIgnoringSafeArea(.all)
-                .saturation(0.5)
-                .blur(radius: 5)
-                .opacity(0.08)
+            WelcomeBackgroundImage()
             HStack {
                 Image(systemName: "table")
                     .resizable()

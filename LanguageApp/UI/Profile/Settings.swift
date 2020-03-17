@@ -25,23 +25,8 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
+//
 
-import SwiftUI
-
-struct ProgressView: View {
-  var body: some View {
-    VStack {
-      Text("Progress")
-        .font(.largeTitle)
-      Spacer()
-    }
-  }
+struct Settings : Codable {
+  var rememberUser: Bool = false
 }
-
-#if DEBUG
-struct ProgressView_Previews: PreviewProvider {
-  static var previews: some View {
-    ProgressView()
-  }
-}
-#endif
