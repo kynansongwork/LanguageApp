@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA7AD88F242120D00054D3F7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD88A242120CF0054D3F7 /* UserManager.swift */; };
 		EA7AD890242120D00054D3F7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD88B242120CF0054D3F7 /* Profile.swift */; };
 		EA7AD891242120D00054D3F7 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD88C242120CF0054D3F7 /* Settings.swift */; };
 		EA7AD892242120D00054D3F7 /* KeyboardFollower.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD88E242120CF0054D3F7 /* KeyboardFollower.swift */; };
@@ -16,6 +15,7 @@
 		EA7AD899242124A50054D3F7 /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD898242124A50054D3F7 /* WelcomeMessageView.swift */; };
 		EA7AD89B242125650054D3F7 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD89A242125650054D3F7 /* RegisterView.swift */; };
 		EA7AD89D24212A7D0054D3F7 /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD89C24212A7D0054D3F7 /* BorderedViewModifier.swift */; };
+		EA7AD89F242225620054D3F7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AD89E242225620054D3F7 /* UserManager.swift */; };
 		EA7D79E3241FBCE800AD2347 /* cn.json in Resources */ = {isa = PBXBuildFile; fileRef = EA7D79E2241FBCE800AD2347 /* cn.json */; };
 		EA7D79E8241FBE1800AD2347 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7D79E7241FBE1800AD2347 /* WelcomeView.swift */; };
 		EAE63E76241FBC8E00A2C35F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE63E75241FBC8E00A2C35F /* AppDelegate.swift */; };
@@ -27,7 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA7AD88A242120CF0054D3F7 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		EA7AD88B242120CF0054D3F7 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		EA7AD88C242120CF0054D3F7 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		EA7AD88E242120CF0054D3F7 /* KeyboardFollower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardFollower.swift; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		EA7AD898242124A50054D3F7 /* WelcomeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageView.swift; sourceTree = "<group>"; };
 		EA7AD89A242125650054D3F7 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		EA7AD89C24212A7D0054D3F7 /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
+		EA7AD89E242225620054D3F7 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		EA7D79E2241FBCE800AD2347 /* cn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cn.json; sourceTree = "<group>"; };
 		EA7D79E7241FBE1800AD2347 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		EA7D7A75241FDE1D00AD2347 /* Languages */ = {isa = PBXFileReference; lastKnownFileType = text; name = Languages; path = Packages/Languages; sourceTree = SOURCE_ROOT; };
@@ -64,9 +64,9 @@
 		EA7AD889242120CF0054D3F7 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				EA7AD88A242120CF0054D3F7 /* UserManager.swift */,
 				EA7AD88B242120CF0054D3F7 /* Profile.swift */,
 				EA7AD88C242120CF0054D3F7 /* Settings.swift */,
+				EA7AD89E242225620054D3F7 /* UserManager.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -257,10 +257,10 @@
 				EAE63E76241FBC8E00A2C35F /* AppDelegate.swift in Sources */,
 				EA7AD890242120D00054D3F7 /* Profile.swift in Sources */,
 				EA7AD899242124A50054D3F7 /* WelcomeMessageView.swift in Sources */,
+				EA7AD89F242225620054D3F7 /* UserManager.swift in Sources */,
 				EA7AD897242123930054D3F7 /* LogoImage.swift in Sources */,
 				EAE63E78241FBC8E00A2C35F /* SceneDelegate.swift in Sources */,
 				EA7AD892242120D00054D3F7 /* KeyboardFollower.swift in Sources */,
-				EA7AD88F242120D00054D3F7 /* UserManager.swift in Sources */,
 				EA7AD895242122260054D3F7 /* WelcomeBackgroundImage.swift in Sources */,
 				EA7D79E8241FBE1800AD2347 /* WelcomeView.swift in Sources */,
 			);
