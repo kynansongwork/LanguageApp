@@ -14,6 +14,8 @@ struct WelcomeBackgroundImage: View {
         .resizable()
         .aspectRatio(1 / 1, contentMode: .fill)
         .edgesIgnoringSafeArea(.all)
+        .fixedSize()
+        .padding()
         .saturation(0.5)
         .blur(radius: 5)
         .opacity(0.08)

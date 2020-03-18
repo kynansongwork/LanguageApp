@@ -23,19 +23,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Use a UIHostingController as window root view controller.
         
-        let userManager = UserManager()
-        userManager.load()
-        
         if let windowScene = scene as? UIWindowScene {
             
-            if let windowScene = scene as? UIWindowScene {
-                let window = UIWindow(windowScene: windowScene)
-                window.rootViewController = UIHostingController(rootView: RegisterView(keyboardHandler: KeyboardFollower())
-                    .environmentObject(userManager)
-                )
-                self.window = window
-                window.makeKeyAndVisible()
-            }
+            let userManager = UserManager()
+            userManager.load()
+            
+            let challengeViewModel = ChallengesViewModel()
+            
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = UIHostingController(rootView: StarterView()
+                .environmentObject(userManager)
+                .environmentObject(challengeViewModel)
+            )
+            self.window = window
+            window.makeKeyAndVisible()
         }
         
 

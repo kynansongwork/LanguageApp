@@ -8,29 +8,39 @@
 
 import SwiftUI
 
-struct WelcomeView {
-  
+struct WelcomeView: View {
+    @EnvironmentObject var userManager: UserManager
+    @EnvironmentObject var challengesViewModel: ChallengesViewModel
     @State private var showHome = false
-    
-    private let name: String
-    
-    init(name: String) {
-        self.name = name
-    }
-}
 
-extension WelcomeView: View {
-    
+    @ViewBuilder
     var body: some View {
-        ZStack {
-            WelcomeBackgroundImage()
-            WelcomeMessageView()
+        if showHome {
+            PracticeView(
+                challengeTest: $challengesViewModel.currentChallenge,
+                userName: $userManager.profile.name)
+        } else {
+            VStack {
+                
+                Text(verbatim: "Hi, \(userManager.profile.name)")
+                
+                WelcomeMessageView()
+                
+                Button(action: {
+                    self.showHome = true
+                }, label: {
+                    HStack {
+                        Image(systemName: "play")
+                        Text(verbatim: "Start")
+                    }
+                })
+            }.background(WelcomeBackgroundImage())
         }
     }
 }
-
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView(name: "Kynan")
+        WelcomeView()
+        .environmentObject(UserManager())
     }
 }
